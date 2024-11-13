@@ -15,7 +15,7 @@ services:
     ports:
       - "4000:4000"
     environment:
-      - MONGO_URI=mongodb://mongo:27017/activity-tracker
+      - MONGO_URI=mongodb+srv://uppalapatipranita:Aypravija%4009@cluster0.vr7zw.mongodb.net/activity-tracker?retryWrites=true&w=majority
 
   mongo:
     image: mongo
