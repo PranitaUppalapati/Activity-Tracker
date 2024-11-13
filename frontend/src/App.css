@@ -1,38 +1,214 @@
-.App {
+.app-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  color: #36a2eb;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.date-selector {
+  margin: 20px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.date-selector label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.date-selector input {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.hour-cell {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.hour-cell.filled {
+  font-weight: bold;
+}
+
+.hour-cell input {
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.total-hours {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.total-hours strong {
+  color: #0088fe;
+}
+
+.productive-activities {
+  margin-top: 20px;
+}
+
+.productive-activities h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.productive-activities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.productive-activities li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.productive-activities button {
+  padding: 2px 8px;
+  background-color: #e74c3c;
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.productive-activities input {
+  padding: 5px;
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.productivity-summary {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.productivity-summary strong {
+  color: #00C49F;
+}
+
+.app-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+}
+
+.date-selector {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.date-selector input {
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.hour-cell {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.hour-cell label {
+  font-weight: bold;
+}
+
+.hour-cell input {
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Tabs Styling */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f1f1f1;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabs button:hover {
+  background-color: #e0e0e0;
+  border-color: #888;
+}
+
+.tabs button.active {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .tabs button {
+    width: 80%;
+    margin: 5px 0;
   }
+}
+
+
+.chart-container {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
