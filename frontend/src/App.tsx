@@ -65,16 +65,6 @@ const generateRandomPastelColor = () => {
   return pastelColors[Math.floor(Math.random() * pastelColors.length)];
 };
 
-// Assign colors dynamically to new activities
-const assignActivityColor = (activity: string) => {
-  if (!ACTIVITY_COLORS[activity]) {
-    ACTIVITY_COLORS[activity] =
-      INITIAL_COLORS.length > Object.keys(ACTIVITY_COLORS).length
-        ? INITIAL_COLORS[Object.keys(ACTIVITY_COLORS).length]
-        : generateRandomPastelColor();
-  }
-  return ACTIVITY_COLORS[activity];
-};
 
 function App() {
   const [data, setData] = useState<DayData>({});
